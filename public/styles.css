@@ -1363,6 +1363,33 @@ footer {
   }
 }
 
+/* Experience Page - Featured Role */
+.experience-card {
+  position: relative;
+}
+
+.experience-card.featured-role {
+  border: 2px solid var(--color-accent);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, var(--color-card) 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-card.featured-role::before {
+  content: "Current Role";
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--color-gradient-primary);
+  color: var(--color-bg);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Resume Page Styles */
 .job-entry {
   margin: 2rem 0;
