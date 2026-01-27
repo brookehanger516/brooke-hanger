@@ -1,0 +1,101 @@
+[
+  {
+    "id": "salesforce-crm-migration",
+    "name": "Enterprise CRM Migration to Salesforce",
+    "summary": "Led multi-phase Salesforce implementation for Fortune 500 client, migrating legacy systems and training 200+ users. Achieved 40% increase in sales productivity and 25% faster deal cycles.",
+    "type": "case-study",
+    "pillar": "CRM",
+    "featured": true,
+    "tags": ["salesforce", "crm", "enterprise", "migration", "change-management"],
+    "metrics": {
+      "revenue": "$2.3M ARR generated",
+      "productivity": "40% increase",
+      "adoption": "95% user adoption"
+    },
+    "links": {
+      "details": "#"
+    }
+  },
+  {
+    "id": "power-bi-analytics-platform",
+    "name": "Power BI Analytics Platform for Retail Chain",
+    "summary": "Designed and deployed comprehensive Power BI dashboards for multi-location retail client, integrating 15+ data sources. Enabled real-time inventory tracking and predictive sales forecasting.",
+    "type": "case-study",
+    "pillar": "Analytics",
+    "featured": true,
+    "tags": ["power-bi", "analytics", "retail", "dashboards", "data-integration"],
+    "metrics": {
+      "dataIntegration": "15+ sources unified",
+      "timeReduction": "60% faster reporting",
+      "roi": "300% ROI in 6 months"
+    },
+    "links": {
+      "details": "#"
+    }
+  },
+  {
+    "id": "ai-sales-automation",
+    "name": "AI-Powered Sales Automation Suite",
+    "summary": "Commercialized AI/ML solution for B2B SaaS client, automating lead scoring, email personalization, and pipeline forecasting. Reduced manual sales operations by 50%.",
+    "type": "case-study",
+    "pillar": "AI",
+    "featured": true,
+    "tags": ["ai", "automation", "machine-learning", "b2b", "saas"],
+    "metrics": {
+      "efficiency": "50% operations reduction",
+      "leadQuality": "35% higher conversion",
+      "revenue": "$1.8M pipeline generated"
+    },
+    "links": {
+      "details": "#"
+    }
+  },
+  {
+    "id": "cloud-infrastructure-optimization",
+    "name": "AWS Cloud Infrastructure Optimization",
+    "summary": "Partnered with engineering teams to optimize AWS infrastructure for high-growth startup, reducing costs by 45% while improving performance and scalability.",
+    "type": "case-study",
+    "pillar": "Cloud",
+    "tags": ["aws", "cloud", "optimization", "infrastructure", "cost-reduction"],
+    "metrics": {
+      "costSavings": "45% reduction",
+      "performance": "2x faster response times",
+      "scalability": "10x capacity increase"
+    },
+    "links": {
+      "details": "#"
+    }
+  },
+  {
+    "id": "multilingual-market-expansion",
+    "name": "Latin American Market Expansion",
+    "summary": "Spearheaded entry into Spanish and Portuguese-speaking markets for enterprise software provider, establishing relationships with 30+ organizations and generating $3.2M in new revenue.",
+    "type": "case-study",
+    "pillar": "International",
+    "tags": ["multilingual", "market-expansion", "b2b", "international", "sales"],
+    "metrics": {
+      "newMarkets": "5 countries entered",
+      "revenue": "$3.2M generated",
+      "partnerships": "30+ organizations"
+    },
+    "links": {
+      "details": "#"
+    }
+  },
+  {
+    "id": "workflow-automation-consulting",
+    "name": "Workflow Automation for Financial Services",
+    "summary": "Designed end-to-end automation strategy for financial services firm, integrating Salesforce, Power BI, and custom APIs. Reduced manual data entry by 80% and improved compliance reporting.",
+    "type": "case-study",
+    "pillar": "Automation",
+    "tags": ["automation", "workflow", "financial-services", "integration", "compliance"],
+    "metrics": {
+      "efficiency": "80% manual work eliminated",
+      "accuracy": "99.5% data accuracy",
+      "compliance": "100% audit compliance"
+    },
+    "links": {
+      "details": "#"
+    }
+  }
+]

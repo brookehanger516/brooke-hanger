@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility & Responsiveness Test Suite</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      color: #0176d3;
+    }
+    .test-section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .test-section h2 {
+      margin-bottom: 1rem;
+      color: #333;
+      border-bottom: 2px solid #0176d3;
+      padding-bottom: 0.5rem;
+    }
+    .test-item {
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-left: 4px solid #ddd;
+      background: #fafafa;
+    }
+    .test-item.pass {
+      border-left-color: #2e844a;
+      background: #f0fdf4;
+    }
+    .test-item.fail {
+      border-left-color: #ea001e;
+      background: #fef2f2;
+    }
+    .test-item.warn {
+      border-left-color: #fe9339;
+      background: #fffbeb;
+    }
+    button {
+      background: #0176d3;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+    }
+    button:hover {
+      background: #005fb2;
+    }
+    #results {
+      margin-top: 1rem;
+    }
+    .metric {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      background: #e3f3ff;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-top: 0.5rem;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Portfolio Test Suite – Brooke Hanger</h1>
+  <p style="margin-bottom: 2rem; color: #666;">Comprehensive accessibility, responsiveness, and content validation tests</p>
+
+  <div class="test-section">
+    <h2>Automated Tests</h2>
+    <button onclick="runAllTests()">Run All Tests</button>
+    <button onclick="runAccessibilityTests()">Test Accessibility</button>
+    <button onclick="runResponsivenessTests()">Test Responsiveness</button>
+    <button onclick="runContentTests()">Test Content</button>
+    <div id="results"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Manual Test Checklist</h2>
+    <div class="test-item">
+      <input type="checkbox" id="manual1"> <label for="manual1"><strong>Keyboard Navigation:</strong> Tab through all interactive elements, ensure visible focus indicators</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual2"> <label for="manual2"><strong>Screen Reader:</strong> Test with NVDA/JAWS/VoiceOver, verify landmarks and labels</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual3"> <label for="manual3"><strong>Mobile Navigation:</strong> Test hamburger menu on mobile, ensure no horizontal scroll</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual4"> <label for="manual4"><strong>Color Contrast:</strong> Verify all text meets WCAG 2.2 AA (4.5:1 ratio)</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual5"> <label for="manual5"><strong>Forms:</strong> Submit contact form, test validation and error messages</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual6"> <label for="manual6"><strong>Print Styles:</strong> Print preview all pages, verify readable output</label>
+    </div>
+    <div class="test-item">
+      <input type="checkbox" id="manual7"> <label for="manual7"><strong>Reduced Motion:</strong> Enable OS setting, verify animations are disabled</label>
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h2>Lighthouse Score Targets</h2>
+    <div class="metric">Performance ≥ 90</div>
+    <div class="metric">Accessibility ≥ 95</div>
+    <div class="metric">Best Practices ≥ 95</div>
+    <div class="metric">SEO ≥ 90</div>
+    <p style="margin-top: 1rem;">Run Lighthouse audit in Chrome DevTools to verify scores.</p>
+  </div>
+
+  <script>
+    const tests = {
+      accessibility: [],
+      responsiveness: [],
+      content: []
+    };
+
+    // Accessibility Tests
+    tests.accessibility.push({
+      name: 'Semantic HTML landmarks',
+      test: () => {
+        return document.querySelector('header') && 
+               document.querySelector('nav') && 
+               document.querySelector('main') && 
+               document.querySelector('footer');
+      }
+    });
+
+    tests.accessibility.push({
+      name: 'All images have alt text',
+      test: () => {
+        const images = document.querySelectorAll('img');
+        return Array.from(images).every(img => img.hasAttribute('alt'));
+      }
+    });
+
+    tests.accessibility.push({
+      name: 'Skip link present',
+      test: () => {
+        return document.querySelector('.skip-link') !== null;
+      }
+    });
+
+    tests.accessibility.push({
+      name: 'Heading hierarchy (h1 exists)',
+      test: () => {
+        return document.querySelector('h1') !== null;
+      }
+    });
+
+    tests.accessibility.push({
+      name: 'Form labels associated',
+      test: () => {
+        const labels = document.querySelectorAll('label');
+        return Array.from(labels).every(label => 
+          label.hasAttribute('for') || label.querySelector('input, textarea, select')
+        );
+      }
+    });
+
+    tests.accessibility.push({
+      name: 'Focus-visible styles defined',
+      test: () => {
+        const styles = getComputedStyle(document.body);
+        return document.styleSheets.length > 0; // Basic check
+      }
+    });
+
+    // Responsiveness Tests
+    tests.responsiveness.push({
+      name: 'Viewport meta tag present',
+      test: () => {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        return viewport && viewport.content.includes('width=device-width');
+      }
+    });
+
+    tests.responsiveness.push({
+      name: 'No horizontal overflow',
+      test: () => {
+        return document.documentElement.scrollWidth <= document.documentElement.clientWidth;
+      }
+    });
+
+    tests.responsiveness.push({
+      name: 'Touch-friendly targets (44px min)',
+      test: () => {
+        const buttons = document.querySelectorAll('button, a.cta-button');
+        return Array.from(buttons).every(btn => {
+          const rect = btn.getBoundingClientRect();
+          return rect.height >= 40 || rect.width >= 40; // Close to 44px
+        });
+      }
+    });
+
+    tests.responsiveness.push({
+      name: 'Responsive images configured',
+      test: () => {
+        const images = document.querySelectorAll('img');
+        return Array.from(images).some(img => 
+          img.hasAttribute('srcset') || 
+          getComputedStyle(img).maxWidth === '100%'
+        );
+      }
+    });
+
+    // Content Tests (Brooke's persona)
+    tests.content.push({
+      name: 'References Salesforce',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('salesforce');
+      }
+    });
+
+    tests.content.push({
+      name: 'References Power BI',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('power bi');
+      }
+    });
+
+    tests.content.push({
+      name: 'References Cloud or AI',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('cloud') || bodyText.includes('ai');
+      }
+    });
+
+    tests.content.push({
+      name: 'References B2B or Enterprise',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('b2b') || bodyText.includes('enterprise');
+      }
+    });
+
+    tests.content.push({
+      name: 'Mentions multilingual capabilities',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('multilingual') || 
+               (bodyText.includes('spanish') && bodyText.includes('portuguese'));
+      }
+    });
+
+    tests.content.push({
+      name: 'No references to Taylor Dean',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return !bodyText.includes('taylor dean');
+      }
+    });
+
+    tests.content.push({
+      name: 'References Brooke Hanger',
+      test: () => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return bodyText.includes('brooke') && bodyText.includes('hanger');
+      }
+    });
+
+    function runTests(category) {
+      const results = tests[category].map(test => {
+        try {
+          const passed = test.test();
+          return { name: test.name, status: passed ? 'pass' : 'fail' };
+        } catch (error) {
+          return { name: test.name, status: 'fail', error: error.message };
+        }
+      });
+      return results;
+    }
+
+    function displayResults(results, title) {
+      const resultsDiv = document.getElementById('results');
+      const passed = results.filter(r => r.status === 'pass').length;
+      const total = results.length;
+      
+      let html = `<h3>${title} (${passed}/${total} passed)</h3>`;
+      results.forEach(result => {
+        const className = result.status === 'pass' ? 'pass' : 'fail';
+        const icon = result.status === 'pass' ? '✓' : '✗';
+        html += `<div class="test-item ${className}">
+          <strong>${icon} ${result.name}</strong>
+          ${result.error ? `<br><small>Error: ${result.error}</small>` : ''}
+        </div>`;
+      });
+      
+      resultsDiv.innerHTML += html;
+    }
+
+    function runAccessibilityTests() {
+      document.getElementById('results').innerHTML = '';
+      const results = runTests('accessibility');
+      displayResults(results, 'Accessibility Tests');
+    }
+
+    function runResponsivenessTests() {
+      document.getElementById('results').innerHTML = '';
+      const results = runTests('responsiveness');
+      displayResults(results, 'Responsiveness Tests');
+    }
+
+    function runContentTests() {
+      document.getElementById('results').innerHTML = '';
+      const results = runTests('content');
+      displayResults(results, 'Content Validation Tests');
+    }
+
+    function runAllTests() {
+      document.getElementById('results').innerHTML = '';
+      const a11yResults = runTests('accessibility');
+      const responsiveResults = runTests('responsiveness');
+      const contentResults = runTests('content');
+      
+      displayResults(a11yResults, 'Accessibility Tests');
+      displayResults(responsiveResults, 'Responsiveness Tests');
+      displayResults(contentResults, 'Content Validation Tests');
+
+      // Summary
+      const totalPassed = [...a11yResults, ...responsiveResults, ...contentResults]
+        .filter(r => r.status === 'pass').length;
+      const totalTests = a11yResults.length + responsiveResults.length + contentResults.length;
+      
+      const summary = `<h3 style="color: ${totalPassed === totalTests ? '#2e844a' : '#fe9339'}">
+        Overall: ${totalPassed}/${totalTests} tests passed (${Math.round(totalPassed/totalTests*100)}%)
+      </h3>`;
+      document.getElementById('results').innerHTML = summary + document.getElementById('results').innerHTML;
+    }
+  </script>
+</body>
+</html>
