@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "automationLab": "Laboratorio",
+    "resume": "Currículum",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Brooke Alexis Hanger",
+    "title": "Ejecutiva de Cuentas | Soluciones Cloud & IA",
+    "subtitle": "Profesional de ventas multilingüe impulsando ingresos mediante Salesforce CRM, dashboards de Power BI y automatización inteligente. Historial comprobado en crecimiento de pipeline, cumplimiento de cuota y planificación de cuentas empresariales.",
+    "cta": {
+      "primary": "Ver Laboratorio",
+      "secondary": "Contáctame"
+    }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "bio": "Me especializo en soluciones cloud B2B, combinando experiencia técnica con excelencia en ventas. Fluida en inglés, español, portugués y chino mandarín.",
+    "skills": "Competencias Clave"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "current": "Rol Actual",
+    "achievements": "Logros Clave"
+  },
+  "automationLab": {
+    "title": "Laboratorio de Automatización",
+    "subtitle": "Explora mi dashboard mostrando workflows de Salesforce, análisis de Power BI y herramientas de automatización",
+    "filters": {
+      "all": "Todos",
+      "salesforce": "Salesforce",
+      "powerbi": "Power BI",
+      "automation": "Automatización"
+    },
+    "kpis": {
+      "pipeline": "Pipeline Generado",
+      "deals": "Tratos Automatizados",
+      "timeSaved": "Tiempo Ahorrado",
+      "synced": "Sincronizado Tiempo Real"
+    }
+  },
+  "contact": {
+    "title": "Conectemos",
+    "subtitle": "¿Listo para discutir optimización de CRM, precisión de forecast o automatización empresarial?",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "company": "Empresa",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Algo salió mal. Por favor intenta de nuevo."
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "location": "Disponible para oportunidades remotas e híbridas"
+  }
+}

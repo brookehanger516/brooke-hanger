@@ -1,172 +1,197 @@
+// Navigation Component – Salesforce-style Portfolio
+// Author: Refactored for Brooke Alexis Hanger
+// Version: 2.0.0
+
 (function () {
+  'use strict';
+
   const placeholder = document.getElementById('header-placeholder');
   if (!placeholder) return;
 
-  const headerHTML = `\
-<header class="site-header" data-sticky>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="container navbar">
-    <a class="brand" href="index.html">MacroSight</a>
-    <button
-      class="nav-toggle"
-      type="button"
-      aria-controls="mobile-nav"
-      aria-expanded="false"
-      aria-label="Open menu"
-      data-menu-toggle
+  // Header HTML template
+  const headerHTML = `
+    <header class="site-header" role="banner">
+      <div class="container">
+        <nav class="navbar" aria-label="Main navigation">
+          <a class="brand" href="index.html">Brooke Hanger</a>
+          
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+            data-menu-toggle
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul>
+              <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+              <li><a href="about.html" data-i18n="nav.about">About</a></li>
+              <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+              <li><a href="automation-lab.html" data-i18n="nav.automationLab">Automation Lab</a></li>
+              <li><a href="resume.html" data-i18n="nav.resume">Resume</a></li>
+              <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            
+            <!-- Language Switcher -->
+            <div class="lang-switcher" role="group" aria-label="Language selection">
+              <button type="button" data-lang-switch="en" aria-pressed="true" title="English">EN</button>
+              <button type="button" data-lang-switch="es" aria-pressed="false" title="Español">ES</button>
+              <button type="button" data-lang-switch="fr" aria-pressed="false" title="Français">FR</button>
+              <button type="button" data-lang-switch="zh" aria-pressed="false" title="中文">ZH</button>
+            </div>
+          </nav>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      id="mobile-nav"
+      class="menu-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      hidden
+      data-menu-overlay
     >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
-    <nav id="primary-nav" class="nav" data-collapsible>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="invest.html">Invest</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <nav class="nav" aria-label="Mobile">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="automation-lab.html" data-i18n="nav.automationLab">Automation Lab</a></li>
+          <li><a href="resume.html" data-i18n="nav.resume">Resume</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        
+        <!-- Mobile Language Switcher -->
+        <div class="lang-switcher mobile" role="group" aria-label="Language selection">
+          <button type="button" data-lang-switch="en" aria-pressed="true">English</button>
+          <button type="button" data-lang-switch="es" aria-pressed="false">Español</button>
+          <button type="button" data-lang-switch="fr" aria-pressed="false">Français</button>
+          <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
+        </div>
+      </nav>
+    </div>
+  `;
 
-<div
-  id="mobile-nav"
-  class="menu-overlay"
-  role="dialog"
-  aria-modal="true"
-  hidden
-  data-menu-overlay
->
-  <nav class="nav" aria-label="Primary">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="invest.html">Invest</a></li>
-    </ul>
-  </nav>
-</div>
-`;
+  // Inject header
+  placeholder.outerHTML = headerHTML;
 
-  placeholder.insertAdjacentHTML('beforebegin', headerHTML);
-  placeholder.remove();
-
+  // Get references
+  const menuToggle = document.querySelector('[data-menu-toggle]');
+  const menuOverlay = document.querySelector('[data-menu-overlay]');
   const body = document.body;
-  const toggle = document.querySelector('[data-menu-toggle]');
-  const overlay = document.querySelector('[data-menu-overlay]');
+
+  if (!menuToggle || !menuOverlay) return;
+
+  // Toggle menu function
+  function toggleMenu(forceClose = false) {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    const shouldOpen = forceClose ? false : !isExpanded;
+
+    menuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', shouldOpen ? 'Close navigation menu' : 'Open navigation menu');
+    
+    if (shouldOpen) {
+      menuOverlay.removeAttribute('hidden');
+      body.classList.add('scroll-lock');
+      
+      // Focus first link
+      const firstLink = menuOverlay.querySelector('a');
+      if (firstLink) {
+        setTimeout(() => firstLink.focus(), 100);
+      }
+    } else {
+      menuOverlay.setAttribute('hidden', '');
+      body.classList.remove('scroll-lock');
+      menuToggle.focus();
+    }
+  }
+
+  // Event listeners
+  menuToggle.addEventListener('click', () => toggleMenu());
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      toggleMenu(true);
+    }
+  });
+
+  // Close when clicking overlay backdrop
+  menuOverlay.addEventListener('click', (e) => {
+    if (e.target === menuOverlay) {
+      toggleMenu(true);
+    }
+  });
+
+  // Touch swipe to close (mobile UX)
+  let touchStartY = 0;
+  menuOverlay.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  menuOverlay.addEventListener('touchend', (e) => {
+    const touchEndY = e.changedTouches[0].clientY;
+    const swipeDistance = touchStartY - touchEndY;
+    
+    // Swipe down to close (threshold: 80px)
+    if (swipeDistance < -80) {
+      toggleMenu(true);
+    }
+  }, { passive: true });
+
+  // Close when clicking any nav link
+  menuOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => toggleMenu(true));
+  });
+
+  // Focus trap
+  menuOverlay.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+
+    const focusableElements = menuOverlay.querySelectorAll('a, button');
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (e.shiftKey && document.activeElement === firstElement) {
+      e.preventDefault();
+      lastElement.focus();
+    } else if (!e.shiftKey && document.activeElement === lastElement) {
+      e.preventDefault();
+      firstElement.focus();
+    }
+  });
+
+  // Highlight current page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.setAttribute('aria-current', 'page');
+      link.style.color = 'var(--color-primary)';
+      link.style.fontWeight = 'var(--font-weight-semibold)';
+    }
+  });
+
+  // Sticky header shadow on scroll
   const header = document.querySelector('.site-header');
-  if (!toggle || !overlay) return;
-
-  // Highlight the current page in both the desktop and mobile navigation
-  const path = window.location.pathname.split('/').pop();
-  document
-    .querySelectorAll('#primary-nav a, #mobile-nav a')
-    .forEach((link) => {
-      const linkPath = link.getAttribute('href');
-      if (linkPath === path) {
-        link.classList.add('active');
-      }
-    });
-
-  const focusableSelectors =
-    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
-  let lastFocused = null;
-  let isOpen = false;
-
-  function trapFocus(e) {
-    if (!isOpen || e.key !== 'Tab') return;
-    const focusable = overlay.querySelectorAll(focusableSelectors);
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (!first || !last) return;
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  }
-
-  function onKeydown(e) {
-    if (!isOpen) return;
-    if (e.key === 'Escape') closeMenu();
-  }
-
-  function openMenu() {
-    if (isOpen) return;
-    isOpen = true;
-    lastFocused = document.activeElement;
-    overlay.hidden = false;
-    body.classList.add('scroll-lock');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', 'Close menu');
-    const first = overlay.querySelector(focusableSelectors);
-    first && first.focus();
-  }
-
-  function closeMenu(returnFocus = true) {
-    if (!isOpen) return;
-    isOpen = false;
-    overlay.hidden = true;
-    body.classList.remove('scroll-lock');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open menu');
-    if (returnFocus && lastFocused) {
-      lastFocused.focus();
-    }
-  }
-
-  toggle.addEventListener('click', () => {
-    isOpen ? closeMenu() : openMenu();
-  });
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      closeMenu();
-    } else if (e.target.tagName === 'A') {
-      const href = e.target.getAttribute('href');
-      if (
-        href &&
-        !href.startsWith('#') &&
-        ((href.startsWith('http') && href !== window.location.href) ||
-          (!href.startsWith('http') && href !== window.location.pathname))
-      ) {
-        closeMenu();
-      }
-    }
-  });
-
-  document.addEventListener('keydown', onKeydown);
-  overlay.addEventListener('keydown', trapFocus);
-
-  const mq = window.matchMedia('(min-width: 900px)');
-  function handleMQ(e) {
-    if (e.matches) {
-      closeMenu(false);
-    }
-  }
-  mq.addEventListener('change', handleMQ);
-  handleMQ(mq);
-
-  if (header && header.dataset.sticky !== undefined) {
-    let lastY = window.scrollY;
+  if (header) {
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      header.classList.toggle('scrolled', y > 8);
-      if (y > lastY && y - lastY > 120) {
-        header.classList.add('hide');
-      } else if (y < lastY) {
-        header.classList.remove('hide');
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 10) {
+        header.style.boxShadow = 'var(--shadow-md)';
+      } else {
+        header.style.boxShadow = 'var(--shadow-sm)';
       }
-      lastY = y;
-    });
+      lastScroll = currentScroll;
+    }, { passive: true });
   }
+
 })();

@@ -15,6 +15,71 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./automation-lab.css" />
     <meta name="theme-color" content="#0176d3" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://brookehanger.com/#person",
+          "name": "Brooke Alexis Hanger",
+          "jobTitle": "Salesforce Account Executive & CRM Automation Specialist"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://brookehanger.com/#work-salesforce-dashboard",
+          "name": "Salesforce Pipeline Dashboard",
+          "description": "Real-time CRM dashboard tracking pipeline velocity, win rates, and forecast accuracy with intelligent drill-down capabilities.",
+          "author": { "@id": "https://brookehanger.com/#person" },
+          "keywords": "Salesforce, CRM, Pipeline Management, Sales Analytics",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://brookehanger.com/#work-powerbi-analytics",
+          "name": "Power BI Executive Dashboard",
+          "description": "C-suite analytics dashboard with KPI tracking, trend analysis, and predictive forecasting using DAX and Power Query.",
+          "author": { "@id": "https://brookehanger.com/#person" },
+          "keywords": "Power BI, Business Intelligence, Executive Dashboards, DAX",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://brookehanger.com/#work-automation-workflow",
+          "name": "Intelligent Workflow Automation",
+          "description": "Multi-step automation framework using Salesforce Flow, Process Builder, and Apex triggers for lead routing and opportunity management.",
+          "author": { "@id": "https://brookehanger.com/#person" },
+          "keywords": "Salesforce Automation, Flow Builder, Apex, Process Builder",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://brookehanger.com/#project-list",
+          "name": "Automation Lab Projects",
+          "description": "Portfolio of CRM automation, business intelligence, and workflow optimization projects",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "@id": "https://brookehanger.com/#work-salesforce-dashboard" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": { "@id": "https://brookehanger.com/#work-powerbi-analytics" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": { "@id": "https://brookehanger.com/#work-automation-workflow" }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "experience": "经验",
+    "automationLab": "自动化实验室",
+    "resume": "简历",
+    "contact": "联系"
+  },
+  "hero": {
+    "greeting": "您好，我是 Brooke Alexis Hanger",
+    "title": "客户经理 | 云与人工智能解决方案",
+    "subtitle": "多语言销售专业人士，通过 Salesforce CRM、Power BI 仪表板和智能自动化推动收入增长。在管道增长、配额达成和企业账户规划方面拥有卓越记录。",
+    "cta": {
+      "primary": "查看实验室",
+      "secondary": "联系我"
+    }
+  },
+  "about": {
+    "title": "关于我",
+    "bio": "我专注于 B2B 云解决方案，将技术专长与销售卓越相结合。精通英语、西班牙语、葡萄牙语和普通话。",
+    "skills": "核心能力"
+  },
+  "experience": {
+    "title": "职业经验",
+    "current": "当前职位",
+    "achievements": "主要成就"
+  },
+  "automationLab": {
+    "title": "自动化实验室",
+    "subtitle": "探索我的仪表板，展示 Salesforce 工作流、Power BI 分析和自动化工具",
+    "filters": {
+      "all": "全部",
+      "salesforce": "Salesforce",
+      "powerbi": "Power BI",
+      "automation": "自动化"
+    },
+    "kpis": {
+      "pipeline": "生成管道",
+      "deals": "自动化交易",
+      "timeSaved": "节省时间",
+      "synced": "实时同步"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "准备讨论 CRM 优化、预测准确性或企业自动化？",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮件",
+      "company": "公司",
+      "subject": "主题",
+      "message": "消息",
+      "submit": "发送消息",
+      "sending": "发送中...",
+      "success": "消息发送成功！",
+      "error": "出现问题。请重试。"
+    }
+  },
+  "footer": {
+    "rights": "版权所有",
+    "location": "可远程和混合工作"
+  }
+}

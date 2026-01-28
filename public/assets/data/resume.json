@@ -1,0 +1,270 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Brooke Alexis Hanger",
+    "label": "Account Executive – Cloud & AI Solutions",
+    "image": "",
+    "email": "brookehanger@gmail.com",
+    "phone": "(631) 506-1147",
+    "url": "https://brookehanger.com",
+    "summary": "Multilingual Account Executive with experience in B2B sales, cloud infrastructure, AI solutions, nonprofit leadership, and education. Proven ability to drive revenue through consultative selling, pipeline management, CRM optimization, and cross-functional collaboration. Strong alignment with Salesforce digital strategy and AI commercialization.",
+    "location": {
+      "city": "New York",
+      "countryCode": "US",
+      "region": "NY"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "brookehanger",
+        "url": "https://linkedin.com/in/brookehanger"
+      },
+      {
+        "network": "GitHub",
+        "username": "brookehanger516",
+        "url": "https://github.com/brookehanger516"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Cloud Compute",
+      "position": "Account Executive – Cloud & AI Solutions",
+      "url": "",
+      "startDate": "2022-07-01",
+      "endDate": "",
+      "summary": "Full-cycle sales for GPU and cloud infrastructure across AI and telecom clients",
+      "highlights": [
+        "Closed GPU and cloud infrastructure deals across AI and telecom clients",
+        "Owned full sales cycle: prospecting, demos, needs analysis, negotiation, onboarding, SLAs",
+        "Increased client conversion by 30% through consulting initiatives",
+        "Collaborated with engineering and product teams on custom software solutions",
+        "Maintained data pipelines using Salesforce, ZoomInfo, and analytics platforms"
+      ]
+    },
+    {
+      "name": "ACANY",
+      "position": "Assistant Director – Intellectual/Developmental Disabilities Programs",
+      "url": "",
+      "startDate": "2025-08-01",
+      "endDate": "",
+      "summary": "Leadership role managing care teams and program compliance for 300+ clients",
+      "highlights": [
+        "Led 20+ care managers supporting 300+ clients",
+        "Reduced compliance gaps by 35%",
+        "Oversaw service delivery, life plans, and OPWDD adherence"
+      ]
+    },
+    {
+      "name": "Peace of Mind Professionals",
+      "position": "Founder & CEO",
+      "url": "",
+      "startDate": "2024-11-01",
+      "endDate": "",
+      "summary": "Built and scaled wellness agency from ground up",
+      "highlights": [
+        "Built and scaled wellness agency to $60K+ revenue in first year",
+        "Led digital marketing, client acquisition, operations, and team management"
+      ]
+    },
+    {
+      "name": "Rocky Mountain Human Services",
+      "position": "Case Manager – Medicaid LTSS & IDD Support",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "2025-01-01",
+      "summary": "Managed complex state-funded healthcare systems for 40+ clients",
+      "highlights": [
+        "Managed 40+ clients across complex state-funded healthcare systems",
+        "Streamlined eligibility, assessments, and service coordination (bilingual delivery)"
+      ]
+    },
+    {
+      "name": "High Balsam Farm",
+      "position": "Virtual Assistant & Sales Coordinator",
+      "url": "",
+      "startDate": "2022-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Remote sales and marketing coordination for B2B agriculture business",
+      "highlights": [
+        "Managed digital content, lead generation, e-commerce, and CRM pipelines",
+        "Grew B2B mushroom CSA sales through marketing automation"
+      ]
+    },
+    {
+      "name": "New Amsterdam Denver",
+      "position": "Property Manager",
+      "url": "",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "summary": "Managed multi-million dollar rental portfolio",
+      "highlights": [
+        "Managed $3.2M rental portfolio",
+        "Reduced vacancy by 18% through tenant retention strategies"
+      ]
+    },
+    {
+      "name": "University of New Hampshire",
+      "position": "Adjunct Professor – International Affairs",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Taught political science and global studies courses",
+      "highlights": [
+        "Taught political science and global studies using student-centered design",
+        "Supported accessibility and diverse learning needs"
+      ]
+    },
+    {
+      "name": "Varsity Tutors, Sylvan, TutorMe, FrogTutoring",
+      "position": "Tutor",
+      "url": "",
+      "startDate": "2020-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Delivered 500+ tutoring sessions across multiple subjects and platforms",
+      "highlights": [
+        "Delivered 500+ sessions in English, Math, ESL, Spanish, and test prep",
+        "Specialized in inclusive and neurodivergent learner engagement"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "James Madison University",
+      "url": "https://www.jmu.edu/",
+      "area": "International Affairs – Asia Concentration",
+      "studyType": "Bachelor of Arts",
+      "startDate": "2014-08-01",
+      "endDate": "2018-05-31",
+      "score": "",
+      "courses": [
+        "Minor: Asian Studies",
+        "Study Abroad: National Chengchi University, Taiwan"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Salesforce Certified Associate",
+      "date": "2023-01-01",
+      "issuer": "Salesforce",
+      "url": ""
+    },
+    {
+      "name": "TEFL Certification",
+      "date": "2020-01-01",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Permaculture Design",
+      "date": "2019-01-01",
+      "issuer": "",
+      "url": ""
+    },
+    {
+      "name": "Agroecology & Sustainability",
+      "date": "2018-01-01",
+      "issuer": "USDA + MESA",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Sales & CRM",
+      "level": "Expert",
+      "keywords": [
+        "Full-cycle sales",
+        "Salesforce",
+        "ZoomInfo",
+        "Power BI",
+        "CX360",
+        "Lead generation",
+        "Pipeline management"
+      ]
+    },
+    {
+      "name": "Cloud & AI",
+      "level": "Advanced",
+      "keywords": [
+        "Cloud infrastructure",
+        "AI solutions",
+        "GPU computing",
+        "SaaS product knowledge"
+      ]
+    },
+    {
+      "name": "Strategy & Analytics",
+      "level": "Advanced",
+      "keywords": [
+        "Digital strategy",
+        "Data analytics",
+        "CRM reporting",
+        "Marketing automation"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "French",
+      "fluency": "Highly Proficient"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Highly Proficient"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Global Affairs",
+      "keywords": [
+        "International Relations",
+        "Asian Studies",
+        "Cross-cultural Communication"
+      ]
+    },
+    {
+      "name": "Sustainability",
+      "keywords": [
+        "Permaculture",
+        "Agroecology",
+        "Environmental Education"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Peace of Mind Professionals",
+      "description": "Founded wellness agency scaling to $60K+ revenue in year one",
+      "highlights": [
+        "Built team and operational infrastructure from scratch",
+        "Developed digital marketing strategy",
+        "Managed client acquisition and retention"
+      ],
+      "keywords": [
+        "Entrepreneurship",
+        "Digital Marketing",
+        "Operations"
+      ],
+      "startDate": "2024-11-01",
+      "url": "",
+      "roles": [
+        "Founder",
+        "CEO"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://brookehanger.com/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-01-28T00:24:30.192Z"
+  }
+}

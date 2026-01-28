@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "automationLab": "Automation Lab",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Brooke Alexis Hanger",
+    "title": "Account Executive | Cloud & AI Solutions",
+    "subtitle": "Multilingual sales professional driving revenue through Salesforce CRM, Power BI dashboards, and intelligent automation. Proven track record in pipeline growth, quota attainment, and enterprise account planning.",
+    "cta": {
+      "primary": "View Automation Lab",
+      "secondary": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I specialize in B2B cloud solutions, combining technical expertise with sales excellence. Fluent in English, Spanish, Portuguese, and Mandarin Chinese.",
+    "skills": "Core Competencies"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "Current Role",
+    "achievements": "Key Achievements"
+  },
+  "automationLab": {
+    "title": "Automation Lab",
+    "subtitle": "Explore my dashboard showcasing Salesforce workflows, Power BI analytics, and automation tools",
+    "filters": {
+      "all": "All",
+      "salesforce": "Salesforce",
+      "powerbi": "Power BI",
+      "automation": "Automation"
+    },
+    "kpis": {
+      "pipeline": "Pipeline Generated",
+      "deals": "Deals Automated",
+      "timeSaved": "Time Saved",
+      "synced": "Real-Time Synced"
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Ready to discuss CRM optimization, forecast accuracy, or enterprise automation?",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "location": "Available for remote & hybrid opportunities"
+  }
+}

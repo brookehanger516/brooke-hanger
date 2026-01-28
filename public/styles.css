@@ -403,6 +403,56 @@ body.scroll-lock {
   overflow: hidden;
 }
 
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  gap: var(--space-xs);
+  margin-left: var(--space-md);
+}
+
+.lang-switcher button {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: var(--touch-target);
+}
+
+.lang-switcher button:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.lang-switcher button.active,
+.lang-switcher button[aria-pressed="true"] {
+  color: var(--color-bg);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.lang-switcher.mobile {
+  flex-direction: column;
+  margin: var(--space-lg) 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.lang-switcher.mobile button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Scrollspy active state */
+.nav a.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
 /* Desktop navigation */
 @media (min-width: 900px) {
   .nav-toggle {

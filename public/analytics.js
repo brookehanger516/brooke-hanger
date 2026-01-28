@@ -10,7 +10,7 @@
     
     // Plausible configuration
     plausible: {
-      domain: 'YOUR_PLAUSIBLE_DOMAIN', // Replace with your domain
+      domain: 'brookehanger.com',
       apiHost: 'https://plausible.io',
     },
     
@@ -88,6 +88,43 @@
     init();
   }
 
-  // Expose config for testing
+  // Custom event tracking
+  const trackEvent = (eventName, props = {}) => {
+    if (respectsDNT()) return;
+    if (config.provider === 'plausible' && window.plausible) {
+      window.plausible(eventName, { props });
+    } else if (config.provider === 'ga' && window.gtag) {
+      window.gtag('event', eventName, props);
+    }
+  };
+
+  // Auto-track file downloads
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.href;
+    if (/\.(pdf|json|zip|docx?)$/i.test(href)) {
+      trackEvent('file_download', {
+        file: href.split('/').pop(),
+        location: window.location.pathname,
+      });
+    }
+  });
+
+  // Auto-track outbound links
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.href;
+    if (href.startsWith('http') && !href.includes(window.location.hostname)) {
+      trackEvent('outbound_click', {
+        url: href,
+        text: link.textContent.trim().substring(0, 50),
+      });
+    }
+  });
+
+  // Expose for manual tracking
+  window.trackEvent = trackEvent;
   window.AnalyticsConfig = config;
 })();
