@@ -42,7 +42,6 @@
             <div class="lang-switcher" role="group" aria-label="Language selection">
               <button type="button" data-lang-switch="en" aria-pressed="true" title="English">EN</button>
               <button type="button" data-lang-switch="es" aria-pressed="false" title="Español">ES</button>
-              <button type="button" data-lang-switch="fr" aria-pressed="false" title="Français">FR</button>
               <button type="button" data-lang-switch="zh" aria-pressed="false" title="中文">ZH</button>
             </div>
           </nav>
@@ -73,7 +72,6 @@
         <div class="lang-switcher mobile" role="group" aria-label="Language selection">
           <button type="button" data-lang-switch="en" aria-pressed="true">English</button>
           <button type="button" data-lang-switch="es" aria-pressed="false">Español</button>
-          <button type="button" data-lang-switch="fr" aria-pressed="false">Français</button>
           <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
         </div>
       </nav>
