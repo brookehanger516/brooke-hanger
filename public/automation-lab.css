@@ -220,7 +220,7 @@
 }
 
 .kpi-change.positive {
-  background: #f0fdf4;
+  background: var(--color-success-light);
   color: var(--color-success);
 }
 
@@ -315,12 +315,12 @@
 }
 
 .case-badge.powerbi {
-  background: #fff4e6;
-  color: #fe9339;
+  background: var(--color-warning-light);
+  color: var(--color-warning);
 }
 
 .case-badge.automation {
-  background: #f0fdf4;
+  background: var(--color-success-light);
   color: var(--color-success);
 }
 
@@ -915,4 +915,46 @@
   .cta-section {
     padding: var(--space-2xl) 0;
   }
+}
+
+/* ============================================================================
+   Dark Mode Overrides
+   ============================================================================ */
+
+:root[data-theme="dark"] .dashboard-header {
+  background: linear-gradient(135deg, #0a2540 0%, #1e3a5f 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .segment-tabs {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-theme="dark"] .tab-btn.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-primary);
+}
+
+:root[data-theme="dark"] .kpi-change.positive {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-accent);
+}
+
+:root[data-theme="dark"] .case-badge.powerbi {
+  background: rgba(254, 147, 57, 0.15);
+  color: #ffa726;
+}
+
+:root[data-theme="dark"] .case-badge.automation {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-accent);
+}
+
+:root[data-theme="dark"] .btn-cta-primary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+:root[data-theme="dark"] .btn-cta-primary:hover {
+  background: var(--color-surface-raised);
 }
