@@ -45,7 +45,7 @@
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
-  --gradient-hero: linear-gradient(135deg, #014B8C 0%, #0176d3 50%, #1B8B7E 100%);
+  --gradient-hero: linear-gradient(180deg, #0a2540 0%, #014B8C 100%);
   --gradient-surface: linear-gradient(180deg, #ffffff 0%, #F8FAFB 100%);
   --gradient-shimmer: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
@@ -833,7 +833,7 @@ body.scroll-lock {
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow var(--transition-base), border-color var(--transition-base);
   will-change: transform, box-shadow;
 }
 
@@ -1047,7 +1047,7 @@ button[type="submit"] {
   border: none;
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
   box-shadow: 0 4px 12px rgba(27, 139, 126, 0.3);
   min-height: 48px;
   position: relative;
