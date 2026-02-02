@@ -273,12 +273,12 @@ picture {
 
 /* Section */
 .section {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: var(--space-4xl) 0;
+    padding: var(--space-3xl) 0;
   }
 }
 
@@ -1815,7 +1815,7 @@ body.page-loaded .hero-section {
 }
 
 .section-header {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 /* Filter Bar */
