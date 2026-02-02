@@ -351,12 +351,16 @@ picture {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  gap: var(--space-sm);
+  flex-wrap: nowrap;
 }
 
 .brand-section {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .brand {
@@ -366,6 +370,9 @@ picture {
   text-decoration: none;
   letter-spacing: var(--letter-spacing-tight);
   transition: color var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand:hover {
@@ -508,6 +515,7 @@ body.scroll-lock {
   gap: 4px;
   margin-left: 0;
   margin-top: -4px;
+  flex-shrink: 0;
 }
 
 .lang-switcher button {
@@ -552,6 +560,17 @@ body.scroll-lock {
 .nav a.active {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
+}
+
+/* Tablet adjustments */
+@media (max-width: 899px) {
+  .brand {
+    font-size: var(--font-size-lg);
+  }
+  
+  .navbar {
+    padding: 0 var(--space-sm);
+  }
 }
 
 /* Desktop navigation */
