@@ -7,7 +7,7 @@
 
   const config = {
     // Set to false in production to suppress non-error logs
-    enableDebugLogs: true,
+    enableDebugLogs: false,
     // Module name prefixes for consistent logging
     modulePrefix: true,
     // Queue errors for potential reporting

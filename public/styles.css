@@ -2699,3 +2699,36 @@ a:focus-visible {
     padding: var(--space-lg);
   }
 }
+
+/* ==============================================================================
+   Utility Classes for Inline Style Replacements
+   ============================================================================== */
+
+.success-icon {
+  color: var(--color-success);
+}
+
+.honeypot {
+  display: none;
+}
+
+.form-intro {
+  margin-bottom: var(--space-lg);
+}
+
+.privacy-notice {
+  font-size: var(--font-size-sm);
+}
+
+.about-narrative {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.lang-narrative {
+  margin-top: 1.5rem;
+}
+
+.cta-actions {
+  margin-top: 2rem;
+}
