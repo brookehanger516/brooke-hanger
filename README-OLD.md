@@ -204,7 +204,7 @@ Configuration in `netlify.toml`:
 ## 🤝 Contributing
 
 This is a personal portfolio. For inquiries, contact:
-- **Email**: brooke@example.com
+- **Email**: brookehanger@gmail.com
 - **LinkedIn**: linkedin.com/in/brookehanger
 
 ## 📄 License

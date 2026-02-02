@@ -14,11 +14,24 @@
   const messageField = document.getElementById('message');
   const charCount = document.getElementById('char-count');
 
-  // Character counter for message field
+  // Character counter for message field with limit display
   if (messageField && charCount) {
-    messageField.addEventListener('input', () => {
-      charCount.textContent = messageField.value.length;
-    });
+    const maxLength = messageField.getAttribute('maxlength') || 500;
+    
+    function updateCharCount() {
+      const length = messageField.value.length;
+      charCount.textContent = `${length}/${maxLength} characters`;
+      
+      // Visual feedback when approaching limit
+      if (length > maxLength * 0.9) {
+        charCount.classList.add('char-count-warning');
+      } else {
+        charCount.classList.remove('char-count-warning');
+      }
+    }
+    
+    messageField.addEventListener('input', updateCharCount);
+    updateCharCount(); // Initialize
   }
 
   // Custom validation messages
@@ -149,13 +162,21 @@
       });
 
       if (response.ok) {
-        // Success
+        // Success - show toast notification
+        if (window.toast) {
+          window.toast.success('Message sent successfully! I\'ll get back to you soon.', 5000);
+        }
+        
         if (successMsg) {
           successMsg.hidden = false;
           successMsg.focus();
         }
+        
         form.reset();
-        if (charCount) charCount.textContent = '0';
+        if (charCount) {
+          const maxLength = messageField?.getAttribute('maxlength') || 500;
+          charCount.textContent = `0/${maxLength} characters`;
+        }
         
         // Scroll to success message
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -163,8 +184,13 @@
         throw new Error('Form submission failed');
       }
     } catch (error) {
-      // Error
+      // Error - show toast notification
       console.error('Form submission error:', error);
+      
+      if (window.toast) {
+        window.toast.error('Failed to send message. Please try again or email directly.', 6000);
+      }
+      
       if (errorMsg) {
         errorMsg.hidden = false;
         errorMsg.focus();

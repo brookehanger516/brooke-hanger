@@ -10,7 +10,7 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://brookehanger.com/contact.html" />
+    <meta property="og:url" content="https://brookehanger.com/contact" />
     <meta property="og:title" content="Contact Brooke Alexis Hanger - Cloud & AI Solutions Expert" />
     <meta property="og:description" content="Connect with Brooke for Salesforce, Power BI, and CRM automation consulting." />
     <meta property="og:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
@@ -35,9 +35,15 @@
     }
     </script>
     
-    <link rel="canonical" href="https://brookehanger.com/contact.html" />
+    <link rel="canonical" href="https://brookehanger.com/contact" />
     <link rel="stylesheet" href="./styles.css" />
-    <meta name="theme-color" content="#0176d3" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#014B8C" />
+    <script src="./js/error-handler.js"></script>
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/accessibility.js" defer></script>
+    <script src="./js/pwa-install.js" defer></script>
+    <script src="./js/touch-gestures.js" defer></script>
     <script src="./analytics.js" defer></script>
   </head>
   <body>
@@ -67,9 +73,10 @@
             </p>
 
             <!-- FORMSPREE FORM (DEFAULT) -->
+            <!-- Note: First submission will require email verification -->
             <form
               id="contact-form"
-              action="https://formspree.io/f/YOUR_ENDPOINT_HERE"
+              action="https://formspree.io/f/brookehanger@gmail.com"
               method="POST"
               novalidate
               class="contact-form"
@@ -257,9 +264,7 @@
       <section class="section">
         <div class="container">
           <p class="text-muted" style="font-size: var(--font-size-sm); text-align: center;">
-            <strong>Privacy:</strong> Your information is never shared with third parties. 
-            See our <a href="/privacy.html">privacy policy</a> and 
-            <a href="/analytics-notice.html">analytics disclosure</a>.
+            <strong>Privacy:</strong> Your information is never shared with third parties.
           </p>
         </div>
       </section>
@@ -270,15 +275,17 @@
       <div class="container">
         <p>&copy; 2026 Brooke Alexis Hanger. All rights reserved.</p>
         <nav aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="automation-lab.html">Automation Lab</a>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/automation-lab">Automation Lab</a>
+          <a href="/contact">Contact</a>
         </nav>
       </div>
     </footer>
 
     <script src="./nav.js" defer></script>
+    <script src="./js/toast-notification.js" defer></script>
+    <script src="./js/button-enhancements.js" defer></script>
     <script src="./contact-form.js" defer></script>
   </body>
 </html>

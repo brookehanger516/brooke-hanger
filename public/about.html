@@ -68,13 +68,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#0b0b10" />
-    <link rel="prefetch" href="/experience.html" as="document" />
-    <link rel="prefetch" href="/projects.html" as="document" />
-    <link rel="prefetch" href="/contact.html" as="document" />
-    <link rel="prefetch" href="/resume.html" as="document" />
+    <meta name="theme-color" content="#014B8C" />
+    <script src="./js/error-handler.js"></script>
+    <script src="./js/dark-mode.js"></script>
+    <link rel="prefetch" href="/experience" as="document" />
+    <link rel="prefetch" href="/automation-lab" as="document" />
+    <link rel="prefetch" href="/contact" as="document" />
+    <link rel="prefetch" href="/resume" as="document" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div id="header-placeholder"></div>
 <main id="main" tabindex="-1">
       <!-- Hero Section -->
@@ -482,8 +485,8 @@
             about your goals and explore how I can help drive results.
           </p>
           <div style="margin-top: 2rem">
-            <a href="contact.html" class="cta-button">Start a Conversation</a>
-            <a href="resume.html" class="cta-button secondary"
+            <a href="/contact" class="cta-button">Start a Conversation</a>
+            <a href="/resume" class="cta-button secondary"
               >View Full Resume</a
             >
           </div>
@@ -492,6 +495,11 @@
     </main>
 
     <footer id="footer-placeholder"></footer>
+    <script src="./js/accessibility.js" defer></script>
+    <script src="./js/button-enhancements.js" defer></script>
+    <script src="./js/pwa-install.js" defer></script>
+    <script src="./js/touch-gestures.js" defer></script>
+    <script src="./analytics.js" defer></script>
     <script src="./nav.js" defer></script>
   </body>
 </html>

@@ -43,7 +43,7 @@
           "description": "Multilingual Account Executive driving revenue through Salesforce CRM, Power BI analytics, and intelligent automation. Expertise in pipeline growth, quota attainment, and enterprise account planning.",
           "url": "https://brookehanger.com/",
           "image": "https://brookehanger.com/assets/img/social-card.jpg",
-          "email": "mailto:brooke@example.com",
+          "email": "mailto:brookehanger@gmail.com",
           "knowsLanguage": [
             {"@type": "Language", "name": "English", "alternateName": "en"},
             {"@type": "Language", "name": "Spanish", "alternateName": "es"},
@@ -91,11 +91,36 @@
     </script>
     
     <link rel="canonical" href="https://brookehanger.com/" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#014B8C" />
+    <link rel="apple-touch-icon" href="./img/icon-192.png" />
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
     <link rel="stylesheet" href="./styles.css" />
-    <meta name="theme-color" content="#0176d3" />
+    
+    <!-- Error handler must load first for global error catching -->
+    <script src="./js/error-handler.js"></script>
+    
+    <!-- Dark mode must load before body to prevent flash -->
+    <script src="./js/dark-mode.js"></script>
+    
     <script src="./analytics.js" defer></script>
     <script src="./js/i18n.js" defer></script>
     <script src="./js/scrollspy.js" defer></script>
+    <script src="./js/scroll-animations.js" defer></script>
+    <script src="./js/button-enhancements.js" defer></script>
+    <script src="./js/enhanced-counters.js" defer></script>
+    <script src="./js/lazy-loading.js" defer></script>
+    <script src="./js/parallax-effects.js" defer></script>
+    <script src="./js/pwa-install.js" defer></script>
+    <script src="./js/touch-gestures.js" defer></script>
+    <script src="./js/accessibility.js" defer></script>
+    <script src="./js/dynamic-headline.js" defer></script>
+    <script src="./js/skills-filter.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -108,7 +133,7 @@
           <div class="hero-section fade-in-up">
             <div class="avatar">
               <img
-                src="img/brooke-headshot.jpg"
+                src="img/Taylor_headshot.jpg"
                 alt="Portrait of Brooke Alexis Hanger"
                 width="160"
                 height="160"
@@ -116,16 +141,16 @@
               />
             </div>
             <h1>Brooke Alexis Hanger</h1>
-            <h2 class="hero-subtitle">
-              Account Executive – Cloud & AI Solutions
+            <h2 class="hero-subtitle rotating-headline">
+              Salesforce Sales Cloud Expert
             </h2>
-            <p class="hero-subtitle">
+            <p class="hero-description">
               Driving revenue growth through Salesforce, Power BI, and AI commercialization. Multilingual enterprise sales expert specializing in full-cycle B2B deals, CRM optimization, and digital transformation.
             </p>
             <p class="hero-location">🌎 Multilingual: English | Spanish | Portuguese</p>
             <div class="cta-group">
-              <a href="contact.html" class="cta-button">Let's Connect</a>
-              <a href="automation-lab.html" class="cta-button secondary">Automation Lab</a>
+              <a href="/contact" class="cta-button">Let's Connect</a>
+              <a href="/automation-lab" class="cta-button secondary">Automation Lab</a>
             </div>
           </div>
         </div>
@@ -134,24 +159,24 @@
       <!-- Key Metrics -->
       <section class="section" style="background: var(--color-surface);">
         <div class="container">
-          <h2 class="text-center mb-xl">Impact at a Glance</h2>
+          <h2 class="text-center mb-xl fade-in-up">Impact at a Glance</h2>
           <div class="grid grid-3">
             <div class="card stats-card">
               <div class="metric">
-                <span class="metric-number">$5M+</span>
-                <span class="metric-label">Revenue Generated</span>
+                <span class="metric-number" data-counter data-prefix="$" data-suffix="M+" data-count="5">$5M+</span>
+                <span class="metric-label">📈 Revenue Generated</span>
               </div>
             </div>
             <div class="card stats-card">
               <div class="metric">
-                <span class="metric-number">3</span>
-                <span class="metric-label">Languages Fluent</span>
+                <span class="metric-number" data-counter data-count="3">3</span>
+                <span class="metric-label">🌎 Languages Fluent</span>
               </div>
             </div>
             <div class="card stats-card">
               <div class="metric">
-                <span class="metric-number">100+</span>
-                <span class="metric-label">Client Engagements</span>
+                <span class="metric-number" data-counter data-suffix="+" data-count="100">100+</span>
+                <span class="metric-label">👥 Client Engagements</span>
               </div>
             </div>
           </div>
@@ -159,51 +184,134 @@
       </section>
 
       <!-- Core Expertise -->
-      <section class="section">
+      <section class="section skills-section">
         <div class="container">
-          <h2 class="text-center mb-xl">Core Expertise</h2>
-          <div class="expertise-grid">
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">☁️</div>
-              <h3>Cloud & AI Solutions</h3>
-              <p>
-                Deep expertise in Salesforce ecosystem, AI commercialization, and cloud infrastructure. Translating complex technical capabilities into business value for enterprise clients.
-              </p>
-            </div>
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">📊</div>
-              <h3>Data & Analytics</h3>
-              <p>
-                Power BI mastery, CRM optimization, and data-driven sales strategies. Leveraging analytics to forecast pipelines, identify opportunities, and accelerate deal cycles.
-              </p>
-            </div>
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">🤝</div>
+          <div class="section-header">
+            <h2 class="text-center mb-md fade-in-up">Core Expertise</h2>
+            <p class="text-center text-muted mb-xl">Specialized skills across sales, cloud, and automation</p>
+          </div>
+          
+          <!-- Filter Bar -->
+          <div class="skills-filter-bar">
+            <button class="filter-btn active" data-category="all" aria-pressed="true">
+              <span class="filter-icon">✨</span> All Skills
+            </button>
+            <button class="filter-btn" data-category="sales" aria-pressed="false">
+              <span class="filter-icon">💼</span> Sales
+            </button>
+            <button class="filter-btn" data-category="crm" aria-pressed="false">
+              <span class="filter-icon">📊</span> CRM
+            </button>
+            <button class="filter-btn" data-category="ai" aria-pressed="false">
+              <span class="filter-icon">🤖</span> AI
+            </button>
+            <button class="filter-btn" data-category="cloud" aria-pressed="false">
+              <span class="filter-icon">☁️</span> Cloud
+            </button>
+            <button class="filter-btn" data-category="analytics" aria-pressed="false">
+              <span class="filter-icon">📈</span> Analytics
+            </button>
+          </div>
+
+          <!-- Skills Grid -->
+          <div class="skills-grid">
+            <div class="skill-card" data-categories="sales crm">
+              <div class="skill-icon">💼</div>
               <h3>B2B Enterprise Sales</h3>
-              <p>
-                Full-cycle sales from prospecting to close. Proven track record managing complex stakeholder relationships, negotiating high-value contracts, and driving revenue growth.
-              </p>
+              <p>Full-cycle sales from prospecting to close. Proven track record managing complex stakeholder relationships, negotiating high-value contracts, and driving revenue growth.</p>
+              <div class="skill-tags">
+                <span>Salesforce</span>
+                <span>Pipeline Management</span>
+                <span>Negotiation</span>
+              </div>
             </div>
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">🔄</div>
-              <h3>Automation & Process</h3>
-              <p>
-                Streamlining sales operations through intelligent automation, workflow optimization, and digital transformation initiatives that reduce friction and scale efficiency.
-              </p>
+
+            <div class="skill-card" data-categories="crm analytics">
+              <div class="skill-icon">📊</div>
+              <h3>CRM & Analytics</h3>
+              <p>Power BI mastery, CRM optimization, and data-driven sales strategies. Leveraging analytics to forecast pipelines, identify opportunities, and accelerate deal cycles.</p>
+              <div class="skill-tags">
+                <span>Power BI</span>
+                <span>Salesforce</span>
+                <span>Data Visualization</span>
+              </div>
             </div>
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">🌐</div>
-              <h3>Multilingual Communication</h3>
-              <p>
-                Native fluency in English, Spanish, and Portuguese enables authentic relationships with diverse clients across North and South American markets.
-              </p>
+
+            <div class="skill-card" data-categories="cloud ai">
+              <div class="skill-icon">☁️</div>
+              <h3>Cloud Solutions</h3>
+              <p>Deep expertise in cloud infrastructure, GPU compute, and SaaS platforms. Translating complex technical capabilities into business value for enterprise clients.</p>
+              <div class="skill-tags">
+                <span>Cloud Computing</span>
+                <span>Infrastructure</span>
+                <span>SaaS</span>
+              </div>
             </div>
-            <div class="expertise-card">
-              <div class="expertise-icon" aria-hidden="true">🎯</div>
+
+            <div class="skill-card" data-categories="ai sales">
+              <div class="skill-icon">🤖</div>
+              <h3>AI Commercialization</h3>
+              <p>Specialized in selling AI and ML solutions to enterprises. Understanding technical requirements and translating them into compelling business cases.</p>
+              <div class="skill-tags">
+                <span>AI/ML</span>
+                <span>Solution Selling</span>
+                <span>Technical Sales</span>
+              </div>
+            </div>
+
+            <div class="skill-card" data-categories="crm sales">
+              <div class="skill-icon">🔄</div>
+              <h3>Sales Automation</h3>
+              <p>Streamlining sales operations through intelligent automation, workflow optimization, and digital transformation initiatives that reduce friction and scale efficiency.</p>
+              <div class="skill-tags">
+                <span>Salesforce Flow</span>
+                <span>Process Builder</span>
+                <span>Workflow Automation</span>
+              </div>
+            </div>
+
+            <div class="skill-card" data-categories="sales">
+              <div class="skill-icon">🌐</div>
+              <h3>Multilingual Sales</h3>
+              <p>Native fluency in English, Spanish, and Portuguese enables authentic relationships with diverse clients across North and South American markets.</p>
+              <div class="skill-tags">
+                <span>English</span>
+                <span>Spanish</span>
+                <span>Portuguese</span>
+              </div>
+            </div>
+
+            <div class="skill-card" data-categories="sales analytics">
+              <div class="skill-icon">🎯</div>
               <h3>Strategic Consulting</h3>
-              <p>
-                Partnering with C-suite executives to align technology investments with business objectives. Advisory approach that positions solutions as strategic enablers, not just products.
-              </p>
+              <p>Partnering with C-suite executives to align technology investments with business objectives. Advisory approach that positions solutions as strategic enablers.</p>
+              <div class="skill-tags">
+                <span>Executive Selling</span>
+                <span>Strategy</span>
+                <span>ROI Analysis</span>
+              </div>
+            </div>
+
+            <div class="skill-card" data-categories="analytics crm">
+              <div class="skill-icon">📈</div>
+              <h3>Data-Driven Strategy</h3>
+              <p>Leveraging analytics platforms and business intelligence tools to drive decision-making, forecast accuracy, and identify growth opportunities.</p>
+              <div class="skill-tags">
+                <span>Business Intelligence</span>
+                <span>Forecasting</span>
+                <span>KPI Tracking</span>
+              </div>
+            </div>
+
+            <div class="skill-card" data-categories="cloud crm">
+              <div class="skill-icon">🛠️</div>
+              <h3>Platform Implementation</h3>
+              <p>Experience implementing and optimizing Salesforce, cloud platforms, and enterprise software. Ensuring adoption and maximizing ROI for clients.</p>
+              <div class="skill-tags">
+                <span>Implementation</span>
+                <span>Change Management</span>
+                <span>Training</span>
+              </div>
             </div>
           </div>
         </div>
@@ -279,7 +387,7 @@
           <p style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto var(--space-xl); color: rgba(255,255,255,0.95);">
             Let's discuss how cloud and AI solutions can transform your sales operations and accelerate revenue growth.
           </p>
-          <a href="contact.html" class="cta-button secondary" style="background: white; color: var(--color-primary); border: none;">
+          <a href="/contact" class="cta-button secondary" style="background: white; color: var(--color-primary); border: none;">
             Get in Touch
           </a>
         </div>
@@ -289,11 +397,11 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="experience.html">Experience</a>
-          <a href="automation-lab.html">Automation Lab</a>
-          <a href="resume.html">Resume</a>
-          <a href="contact.html">Contact</a>
+          <a href="/about">About</a>
+          <a href="/experience">Experience</a>
+          <a href="/automation-lab">Automation Lab</a>
+          <a href="/resume">Resume</a>
+          <a href="/contact">Contact</a>
         </div>
         <div class="footer-content">
           <p>&copy; 2026 Brooke Alexis Hanger. All rights reserved.</p>

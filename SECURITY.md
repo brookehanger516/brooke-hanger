@@ -65,7 +65,7 @@
 ./check-ssl.sh
 
 # Check SSL Labs rating
-https://www.ssllabs.com/ssltest/analyze.html?d=macrosight.net
+https://www.ssllabs.com/ssltest/analyze.html?d=brookehanger.com
 ```
 
 ### Test Security Headers
@@ -74,13 +74,13 @@ https://www.ssllabs.com/ssltest/analyze.html?d=macrosight.net
 ./security-test.sh
 
 # Check security headers rating
-https://securityheaders.com/?q=macrosight.net
+https://securityheaders.com/?q=brookehanger.com
 ```
 
 ### Test Performance & Security
 ```bash
 # Check Lighthouse scores
-https://pagespeed.web.dev/report?url=https://macrosight.net
+https://pagespeed.web.dev/report?url=https://brookehanger.com
 ```
 
 ## 🚨 Reporting Security Issues
@@ -100,7 +100,7 @@ https://pagespeed.web.dev/report?url=https://macrosight.net
 
 ### Security Contact:
 - **GitHub Security Advisories**: https://github.com/TylrDn/my-site-3/security
-- **Security.txt**: https://macrosight.net/.well-known/security.txt
+- **Security.txt**: https://brookehanger.com/.well-known/security.txt
 
 ## 🔐 Security Best Practices
 

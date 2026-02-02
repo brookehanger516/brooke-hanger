@@ -15,6 +15,7 @@
     },
     
     // Google Analytics configuration (fallback)
+    // NOTE: Update G-XXXXXXXXXX below before enabling 'ga' provider
     ga: {
       measurementId: 'G-XXXXXXXXXX', // Replace with your GA4 ID
     },

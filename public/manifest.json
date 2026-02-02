@@ -1,0 +1,11 @@
+{
+  "name": "Brooke Alexis Hanger - Cloud & AI Solutions Expert",
+  "short_name": "Brooke Hanger",
+  "description": "Professional portfolio showcasing Salesforce, Power BI, and CRM automation expertise",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#014B8C",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity"]
+}

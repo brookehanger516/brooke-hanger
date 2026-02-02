@@ -452,7 +452,7 @@ npm start  # http://localhost:4173
 - **Code Diff**: [CODE_DIFF.md](CODE_DIFF.md)
 - **Playwright Tests**: [tests/automation-lab.spec.js](../tests/automation-lab.spec.js)
 
-For questions or issues, contact: brooke@example.com
+For questions or issues, contact: brookehanger@gmail.com
 
 ---
 

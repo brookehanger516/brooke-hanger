@@ -1,12 +1,12 @@
 #!/bin/bash
-# SSL Certificate Health Check for macrosight.net
+# SSL Certificate Health Check for brookehanger.com
 
 echo "🔒 SSL Certificate Status Check"
 echo "================================="
 echo ""
 
-DOMAIN="macrosight.net"
-WWW_DOMAIN="www.macrosight.net"
+DOMAIN="brookehanger.com"
+WWW_DOMAIN="www.brookehanger.com"
 
 # Check main domain certificate
 echo "Checking $DOMAIN..."

@@ -18,8 +18,8 @@
 
 # Primary domain redirect (force canonical domain)
 [[redirects]]
-  from = "https://macrosight.netlify.app/*"
-  to = "https://macrosight.net/:splat"
+  from = "https://brookehanger.netlify.app/*"
+  to = "https://brookehanger.com/:splat"
   status = 301
   force = true
 
