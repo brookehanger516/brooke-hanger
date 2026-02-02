@@ -2815,7 +2815,7 @@ a:focus-visible {
 
 .stats-container {
   background: linear-gradient(135deg, rgba(1, 75, 140, 0.02) 0%, rgba(0, 176, 240, 0.02) 100%);
-  padding: var(--spacing-2xl);
+  padding: var(--space-2xl);
   border-radius: var(--radius-lg);
 }
 
