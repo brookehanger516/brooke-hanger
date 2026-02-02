@@ -2759,3 +2759,72 @@ a:focus-visible {
 .cta-actions {
   margin-top: 2rem;
 }
+
+/* ==================== Back to Top Button ==================== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--color-brand);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.3s var(--ease-out);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #013a6f;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ==================== Subtle Section Gradients ==================== */
+.section:nth-child(even) {
+  background: linear-gradient(to bottom, rgba(1, 75, 140, 0.01), rgba(1, 75, 140, 0.02));
+}
+
+.hero-section {
+  background: radial-gradient(circle at top, rgba(1, 75, 140, 0.03) 0%, transparent 70%);
+}
+
+.stats-container {
+  background: linear-gradient(135deg, rgba(1, 75, 140, 0.02) 0%, rgba(0, 176, 240, 0.02) 100%);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+}

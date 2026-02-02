@@ -96,6 +96,11 @@
     <meta name="theme-color" content="#014B8C" />
     <link rel="apple-touch-icon" href="./img/icon-192.png" />
     
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
     <!-- Preload Critical Fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
@@ -137,7 +142,7 @@
                 alt="Portrait of Brooke Alexis Hanger"
                 width="160"
                 height="160"
-                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <h1>Brooke Alexis Hanger</h1>
@@ -394,6 +399,13 @@
       </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+
     <footer class="site-footer">
       <div class="container">
         <div class="footer-links">
@@ -410,5 +422,6 @@
     </footer>
 
     <script src="./nav.js"></script>
+    <script src="./js/back-to-top.js"></script>
   </body>
 </html>

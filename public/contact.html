@@ -97,7 +97,7 @@
                   autocomplete="name"
                   aria-describedby="name-error"
                 />
-                <span class="error-message" id="name-error" role="alert"></span>
+                <span class="error-message" id="name-error" role="alert" aria-live="polite"></span>
               </div>
 
               <!-- Email field -->
@@ -111,7 +111,7 @@
                   autocomplete="email"
                   aria-describedby="email-error"
                 />
-                <span class="error-message" id="email-error" role="alert"></span>
+                <span class="error-message" id="email-error" role="alert" aria-live="polite"></span>
               </div>
 
               <!-- Company field (optional) -->
@@ -138,7 +138,7 @@
                   <option value="Speaking Engagement">Speaking Engagement</option>
                   <option value="General Inquiry">General Inquiry</option>
                 </select>
-                <span class="error-message" id="subject-error" role="alert"></span>
+                <span class="error-message" id="subject-error" role="alert" aria-live="polite"></span>
               </div>
 
               <!-- Message field -->
@@ -156,7 +156,7 @@
                 <span class="character-count">
                   <span id="char-count">0</span>/2000
                 </span>
-                <span class="error-message" id="message-error" role="alert"></span>
+                <span class="error-message" id="message-error" role="alert" aria-live="polite"></span>
               </div>
 
               <!-- Success/Error states -->
@@ -271,6 +271,13 @@
 
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </button>
+
     <footer class="site-footer">
       <div class="container">
         <p>&copy; 2026 Brooke Alexis Hanger. All rights reserved.</p>
@@ -287,5 +294,6 @@
     <script src="./js/toast-notification.js" defer></script>
     <script src="./js/button-enhancements.js" defer></script>
     <script src="./contact-form.js" defer></script>
+    <script src="./js/back-to-top.js"></script>
   </body>
 </html>
