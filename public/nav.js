@@ -178,18 +178,40 @@
     }
   });
 
-  // Sticky header shadow on scroll
+  // Sticky header shadow and hide-on-scroll behavior
   const header = document.querySelector('.site-header');
   if (header) {
     let lastScroll = 0;
+    let ticking = false;
+    
     window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll > 10) {
-        header.style.boxShadow = 'var(--shadow-md)';
-      } else {
-        header.style.boxShadow = 'var(--shadow-sm)';
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
+          
+          // Add shadow when scrolled
+          if (currentScroll > 10) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+          
+          // Hide header when scrolling down, show when scrolling up
+          if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down & past 100px
+            header.classList.add('scrolled-down');
+            header.classList.remove('scrolled-up');
+          } else if (currentScroll < lastScroll) {
+            // Scrolling up
+            header.classList.remove('scrolled-down');
+            header.classList.add('scrolled-up');
+          }
+          
+          lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+          ticking = false;
+        });
+        ticking = true;
       }
-      lastScroll = currentScroll;
     }, { passive: true });
   }
 

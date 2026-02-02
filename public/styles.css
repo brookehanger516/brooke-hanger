@@ -325,7 +325,16 @@ picture {
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base), height 0.3s ease, backdrop-filter 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease, height 0.3s ease, backdrop-filter 0.3s ease;
+  will-change: transform;
+}
+
+.site-header.scrolled-up {
+  transform: translateY(0);
+}
+
+.site-header.scrolled-down {
+  transform: translateY(-100%);
 }
 
 .site-header.scrolled {
@@ -496,13 +505,14 @@ body.scroll-lock {
 /* Language Switcher */
 .lang-switcher {
   display: flex;
-  gap: var(--space-xs);
+  gap: 4px;
   margin-left: 0;
+  margin-top: -4px;
 }
 
 .lang-switcher button {
-  padding: var(--space-xs) var(--space-sm);
-  font-size: var(--font-size-xs);
+  padding: 4px 8px;
+  font-size: 10px;
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
   background: transparent;
@@ -510,7 +520,8 @@ body.scroll-lock {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
-  min-height: 32px;
+  min-height: 24px;
+  line-height: 1;
 }
 
 .lang-switcher button:hover {
