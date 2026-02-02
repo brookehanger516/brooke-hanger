@@ -1,11 +1,11 @@
 #!/bin/bash
-# Comprehensive Security Test for brookehanger.com
+# Comprehensive Security Test for brooke-hanger.com
 
-echo "🔐 Security Audit for brookehanger.com"
+echo "🔐 Security Audit for brooke-hanger.com"
 echo "======================================="
 echo ""
 
-URL="https://brookehanger.com"
+URL="https://brooke-hanger.com"
 
 echo "📋 Testing Security Headers..."
 echo "------------------------------"
@@ -34,12 +34,12 @@ echo "---------------------------"
 
 # Check TLS version
 echo "Supported protocols:"
-echo | openssl s_client -connect brookehanger.com:443 -tls1_2 2>/dev/null | grep -q "Protocol" && echo "✅ TLS 1.2 supported"
-echo | openssl s_client -connect brookehanger.com:443 -tls1_3 2>/dev/null | grep -q "Protocol" && echo "✅ TLS 1.3 supported"
+echo | openssl s_client -connect brooke-hanger.com:443 -tls1_2 2>/dev/null | grep -q "Protocol" && echo "✅ TLS 1.2 supported"
+echo | openssl s_client -connect brooke-hanger.com:443 -tls1_3 2>/dev/null | grep -q "Protocol" && echo "✅ TLS 1.3 supported"
 
 echo ""
 echo "Certificate issuer:"
-echo | openssl s_client -connect brookehanger.com:443 -servername brookehanger.com 2>/dev/null | openssl x509 -noout -issuer | cut -d= -f2-
+echo | openssl s_client -connect brooke-hanger.com:443 -servername brooke-hanger.com 2>/dev/null | openssl x509 -noout -issuer | cut -d= -f2-
 
 echo ""
 echo "🌐 DNS & Domain Security..."
@@ -47,7 +47,7 @@ echo "---------------------------"
 
 # Check CAA records
 echo "CAA Records (Certificate Authority Authorization):"
-CAA=$(dig brookehanger.com CAA +short 2>/dev/null)
+CAA=$(dig brooke-hanger.com CAA +short 2>/dev/null)
 if [ -z "$CAA" ]; then
   echo "⚠️  No CAA records found (recommended to add for extra security)"
 else
@@ -59,7 +59,7 @@ echo ""
 echo "🚀 HTTP to HTTPS Redirect..."
 echo "----------------------------"
 
-HTTP_REDIRECT=$(curl -sI http://brookehanger.com | head -n 1)
+HTTP_REDIRECT=$(curl -sI http://brooke-hanger.com | head -n 1)
 if echo "$HTTP_REDIRECT" | grep -q "301\|302"; then
   echo "✅ HTTP redirects to HTTPS"
 else
@@ -72,16 +72,16 @@ echo "------------------------"
 
 # Check main domain
 if curl -sI "$URL" | head -n 1 | grep -q "200"; then
-  echo "✅ brookehanger.com is accessible"
+  echo "✅ brooke-hanger.com is accessible"
 else
-  echo "❌ brookehanger.com is not accessible"
+  echo "❌ brooke-hanger.com is not accessible"
 fi
 
 # Check www subdomain
-if curl -sI "https://www.brookehanger.com" | head -n 1 | grep -q "200\|301"; then
-  echo "✅ www.brookehanger.com is accessible"
+if curl -sI "https://www.brooke-hanger.com" | head -n 1 | grep -q "200\|301"; then
+  echo "✅ www.brooke-hanger.com is accessible"
 else
-  echo "❌ www.brookehanger.com is not accessible"
+  echo "❌ www.brooke-hanger.com is not accessible"
 fi
 
 echo ""
@@ -89,5 +89,5 @@ echo "✅ Security audit complete!"
 echo ""
 echo "💡 Recommendations:"
 echo "- Run this script monthly to monitor security posture"
-echo "- Check https://securityheaders.com/?q=brookehanger.com for detailed analysis"
-echo "- Check https://www.ssllabs.com/ssltest/analyze.html?d=brookehanger.com for SSL rating"
+echo "- Check https://securityheaders.com/?q=brooke-hanger.com for detailed analysis"
+echo "- Check https://www.ssllabs.com/ssltest/analyze.html?d=brooke-hanger.com for SSL rating"

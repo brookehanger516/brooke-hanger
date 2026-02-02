@@ -10,7 +10,7 @@
     
     // Plausible configuration
     plausible: {
-      domain: 'brookehanger.com',
+      domain: 'brooke-hanger.com',
       apiHost: 'https://plausible.io',
     },
     

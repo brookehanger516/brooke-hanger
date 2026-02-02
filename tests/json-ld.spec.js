@@ -32,7 +32,7 @@ test.describe('JSON-LD Structured Data', () => {
     
     // Validate Person entity
     expect(person).toBeDefined();
-    expect(person['@id']).toBe('https://brookehanger.com/#person');
+    expect(person['@id']).toBe('https://brooke-hanger.com/#person');
     expect(person.name).toBe('Brooke Alexis Hanger');
     expect(person.jobTitle).toContain('Account Executive');
     expect(person.knowsLanguage).toBeDefined();
@@ -44,16 +44,16 @@ test.describe('JSON-LD Structured Data', () => {
     
     // Validate WebSite entity
     expect(website).toBeDefined();
-    expect(website['@id']).toBe('https://brookehanger.com/#website');
-    expect(website.url).toBe('https://brookehanger.com/');
+    expect(website['@id']).toBe('https://brooke-hanger.com/#website');
+    expect(website.url).toBe('https://brooke-hanger.com/');
     expect(website.inLanguage).toContain('en');
     expect(website.inLanguage).toContain('es');
-    expect(website.author['@id']).toBe('https://brookehanger.com/#person');
+    expect(website.author['@id']).toBe('https://brooke-hanger.com/#person');
     
     // Validate Organization entity
     expect(org).toBeDefined();
-    expect(org['@id']).toBe('https://brookehanger.com/#organization');
-    expect(org.employee['@id']).toBe('https://brookehanger.com/#person');
+    expect(org['@id']).toBe('https://brooke-hanger.com/#organization');
+    expect(org.employee['@id']).toBe('https://brooke-hanger.com/#person');
   });
 
   test('JSON-LD has stable @id references', async ({ page }) => {
@@ -73,7 +73,7 @@ test.describe('JSON-LD Structured Data', () => {
     
     // Ensure IDs use canonical domain
     ids.forEach(id => {
-      expect(id).toContain('brookehanger.com');
+      expect(id).toContain('brooke-hanger.com');
       expect(id).toContain('#');
     });
   });

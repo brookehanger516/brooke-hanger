@@ -68,7 +68,7 @@ npm run deploy
 
 Complete these steps before your first deployment:
 
-- [ ] **Update analytics domain** in `public/analytics.js` (line 10) to `brookehanger.com`
+- [ ] **Update analytics domain** in `public/analytics.js` (line 10) to `brooke-hanger.com`
 - [ ] **Add Formspree endpoint** in `public/contact.html` (line 49): Sign up at [formspree.io](https://formspree.io) and replace `YOUR_ENDPOINT_HERE`
 - [ ] **Generate social card image** (1200×630px JPG) at `public/assets/img/social-card.jpg`
 - [ ] **Create favicon set** (use [realfavicongenerator.net](https://realfavicongenerator.net))
@@ -99,7 +99,7 @@ npm run resume:build
 1. **Enable GitHub Pages**:
    - Go to **Settings → Pages**
    - Source: **GitHub Actions** (for automatic deployment)
-   - Custom domain: `brookehanger.com`
+   - Custom domain: `brooke-hanger.com`
 
 2. **DNS Configuration**:
    Add these records to your DNS provider:
@@ -118,7 +118,7 @@ npm run resume:build
    npm run deploy
    ```
    
-   Site will be live at `https://brookehanger.com` within 5-10 minutes
+   Site will be live at `https://brooke-hanger.com` within 5-10 minutes
 
 ### Vercel (Alternative)
 
@@ -129,7 +129,7 @@ npm run resume:build
    
 2. **Add Custom Domain**:
    - Go to **Settings → Domains**
-   - Add `brookehanger.com`
+   - Add `brooke-hanger.com`
    - Update DNS: `CNAME → cname.vercel-dns.com`
 
 3. **Deploy**:
@@ -149,7 +149,7 @@ Analytics are configured in `public/analytics.js`:
 const config = {
   provider: 'plausible',  // 'plausible' | 'ga' | 'none'
   plausible: {
-    domain: 'brookehanger.com',
+    domain: 'brooke-hanger.com',
     apiHost: 'https://plausible.io',
   }
 };
@@ -316,7 +316,7 @@ const config = {
   provider: 'plausible', // 'plausible' | 'ga' | 'none'
   
   plausible: {
-    domain: 'brookehanger.com', // Your domain
+    domain: 'brooke-hanger.com', // Your domain
     apiHost: 'https://plausible.io',
   },
   
@@ -484,7 +484,7 @@ The resume includes inline JSON-LD structured data (Schema.org/Person):
 ```bash
 # Validate with online tools
 open https://validator.schema.org/
-# Paste: https://brookehanger.com/resume-new.html
+# Paste: https://brooke-hanger.com/resume-new.html
 
 # Or use local linter
 npx jsonld-linter public/resume-new.html
@@ -584,7 +584,7 @@ Tests validate:
 ```json
 {
   "@type": "Person",
-  "@id": "https://brookehanger.com/#person",
+  "@id": "https://brooke-hanger.com/#person",
   "name": "Brooke Alexis Hanger",
   "givenName": "Brooke",
   "familyName": "Hanger",
@@ -614,14 +614,14 @@ Tests validate:
      "@graph": [
        {
          "@type": "Person",
-         "@id": "https://brookehanger.com/#person",
+         "@id": "https://brooke-hanger.com/#person",
          "name": "Brooke Alexis Hanger"
        },
        {
          "@type": "CreativeWork",
-         "@id": "https://brookehanger.com/#work-example",
+         "@id": "https://brooke-hanger.com/#work-example",
          "name": "Salesforce Dashboard",
-         "author": { "@id": "https://brookehanger.com/#person" }
+         "author": { "@id": "https://brooke-hanger.com/#person" }
        }
      ]
    }
@@ -687,7 +687,7 @@ Tests validate:
 2. **Custom Domain (Optional)**:
    - Add `CNAME` file in `public/`:
      ```bash
-     echo "brookehanger.com" > public/CNAME
+     echo "brooke-hanger.com" > public/CNAME
      ```
    - Configure DNS (see DNS section below)
 
@@ -733,7 +733,7 @@ Tests validate:
 
 ### GitHub Pages DNS
 
-#### Subdomain (`www.brookehanger.com`)
+#### Subdomain (`www.brooke-hanger.com`)
 
 1. Add **CNAME** record in your DNS provider:
    ```
@@ -745,10 +745,10 @@ Tests validate:
 
 2. Add `CNAME` file in repo (`public/CNAME`):
    ```
-   www.brookehanger.com
+   www.brooke-hanger.com
    ```
 
-#### Apex Domain (`brookehanger.com`)
+#### Apex Domain (`brooke-hanger.com`)
 
 1. Add **A** records (GitHub Pages IPs):
    ```
@@ -790,7 +790,7 @@ Tests validate:
 
 3. Add `CNAME` file in repo:
    ```
-   brookehanger.com
+   brooke-hanger.com
    ```
 
 4. Enable **HTTPS** in GitHub Pages settings (automatic)
@@ -799,7 +799,7 @@ Tests validate:
 
 1. **Add Domain** in Vercel dashboard:
    - Project Settings → Domains → Add Domain
-   - Enter `brookehanger.com`
+   - Enter `brooke-hanger.com`
 
 2. **Configure DNS**:
 

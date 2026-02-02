@@ -19,7 +19,7 @@
 # Primary domain redirect (force canonical domain)
 [[redirects]]
   from = "https://brookehanger.netlify.app/*"
-  to = "https://brookehanger.com/:splat"
+  to = "https://brooke-hanger.com/:splat"
   status = 301
   force = true
 

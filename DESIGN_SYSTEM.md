@@ -403,10 +403,10 @@ Start with semantic HTML, layer on styles and JS:
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brookehanger.com/[page].html" />
+  <meta property="og:url" content="https://brooke-hanger.com/[page].html" />
   <meta property="og:title" content="[Page Title]" />
   <meta property="og:description" content="[Description]" />
-  <meta property="og:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
+  <meta property="og:image" content="https://brooke-hanger.com/assets/img/social-card.jpg" />
   <meta property="og:image:alt" content="Brooke Alexis Hanger - Cloud & AI Solutions Expert" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -415,7 +415,7 @@ Start with semantic HTML, layer on styles and JS:
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="[Page Title]" />
   <meta name="twitter:description" content="[Description]" />
-  <meta name="twitter:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
+  <meta name="twitter:image" content="https://brooke-hanger.com/assets/img/social-card.jpg" />
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -425,12 +425,12 @@ Start with semantic HTML, layer on styles and JS:
     "name": "Brooke Alexis Hanger",
     "jobTitle": "Account Executive - Cloud & AI Solutions",
     "knowsLanguage": ["en", "es", "pt"],
-    "url": "https://brookehanger.com/"
+    "url": "https://brooke-hanger.com/"
   }
   </script>
   
   <!-- Canonical -->
-  <link rel="canonical" href="https://brookehanger.com/[page].html" />
+  <link rel="canonical" href="https://brooke-hanger.com/[page].html" />
   
   <!-- Styles & Scripts -->
   <link rel="stylesheet" href="./styles.css" />

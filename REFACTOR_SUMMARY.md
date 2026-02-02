@@ -89,7 +89,7 @@ Comprehensive refactoring of the Brooke Alexis Hanger portfolio for mobile-first
 <meta name="language" content="English" />
 
 <!-- Open Graph -->
-<meta property="og:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
+<meta property="og:image" content="https://brooke-hanger.com/assets/img/social-card.jpg" />
 <meta property="og:image:alt" content="Brooke Alexis Hanger - Cloud & AI Solutions Expert" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -404,10 +404,10 @@ npx playwright test --debug
   
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brookehanger.com/[page].html" />
+  <meta property="og:url" content="https://brooke-hanger.com/[page].html" />
   <meta property="og:title" content="[Page Title] - Brooke Alexis Hanger" />
   <meta property="og:description" content="[Description]" />
-  <meta property="og:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
+  <meta property="og:image" content="https://brooke-hanger.com/assets/img/social-card.jpg" />
   <meta property="og:image:alt" content="Brooke Alexis Hanger - Cloud & AI Solutions Expert" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -416,9 +416,9 @@ npx playwright test --debug
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="[Page Title] - Brooke Alexis Hanger" />
   <meta name="twitter:description" content="[Description]" />
-  <meta name="twitter:image" content="https://brookehanger.com/assets/img/social-card.jpg" />
+  <meta name="twitter:image" content="https://brooke-hanger.com/assets/img/social-card.jpg" />
   
-  <link rel="canonical" href="https://brookehanger.com/[page].html" />
+  <link rel="canonical" href="https://brooke-hanger.com/[page].html" />
   <link rel="stylesheet" href="./styles.css" />
   <meta name="theme-color" content="#0176d3" />
   <script src="./analytics.js" defer></script>

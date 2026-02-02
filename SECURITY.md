@@ -65,7 +65,7 @@
 ./check-ssl.sh
 
 # Check SSL Labs rating
-https://www.ssllabs.com/ssltest/analyze.html?d=brookehanger.com
+https://www.ssllabs.com/ssltest/analyze.html?d=brooke-hanger.com
 ```
 
 ### Test Security Headers
@@ -74,13 +74,13 @@ https://www.ssllabs.com/ssltest/analyze.html?d=brookehanger.com
 ./security-test.sh
 
 # Check security headers rating
-https://securityheaders.com/?q=brookehanger.com
+https://securityheaders.com/?q=brooke-hanger.com
 ```
 
 ### Test Performance & Security
 ```bash
 # Check Lighthouse scores
-https://pagespeed.web.dev/report?url=https://brookehanger.com
+https://pagespeed.web.dev/report?url=https://brooke-hanger.com
 ```
 
 ## 🚨 Reporting Security Issues
@@ -100,7 +100,7 @@ https://pagespeed.web.dev/report?url=https://brookehanger.com
 
 ### Security Contact:
 - **GitHub Security Advisories**: https://github.com/TylrDn/my-site-3/security
-- **Security.txt**: https://brookehanger.com/.well-known/security.txt
+- **Security.txt**: https://brooke-hanger.com/.well-known/security.txt
 
 ## 🔐 Security Best Practices
 

@@ -1,12 +1,12 @@
 #!/bin/bash
-# SSL Certificate Health Check for brookehanger.com
+# SSL Certificate Health Check for brooke-hanger.com
 
 echo "🔒 SSL Certificate Status Check"
 echo "================================="
 echo ""
 
-DOMAIN="brookehanger.com"
-WWW_DOMAIN="www.brookehanger.com"
+DOMAIN="brooke-hanger.com"
+WWW_DOMAIN="www.brooke-hanger.com"
 
 # Check main domain certificate
 echo "Checking $DOMAIN..."
