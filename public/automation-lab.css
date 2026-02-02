@@ -5,9 +5,7 @@
 
 /* Dashboard Header */
 .dashboard-header {
-  background: linear-gradient(135deg, var(--gradient-hero));
-  background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+  background: var(--gradient-primary);
   border-bottom: none;
   padding: var(--space-xl) 0 var(--space-lg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -69,11 +67,11 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   padding: var(--space-xs);
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .segment-tabs::-webkit-scrollbar {
@@ -85,7 +83,7 @@
   font-family: var(--font-family);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   background: transparent;
   border: none;
   border-radius: var(--radius-full);
@@ -97,12 +95,12 @@
 
 .tab-btn:hover {
   color: white;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .tab-btn.active {
   color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.95);
+  background: white;
   font-weight: var(--font-weight-semibold);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
