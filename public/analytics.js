@@ -5,19 +5,13 @@
   'use strict';
 
   const config = {
-    // Toggle between 'plausible', 'ga', or 'none'
+    // Toggle between 'plausible' or 'none'
     provider: 'plausible',
     
     // Plausible configuration
     plausible: {
       domain: 'brooke-hanger.com',
       apiHost: 'https://plausible.io',
-    },
-    
-    // Google Analytics configuration (fallback)
-    // Set to your GA4 ID (e.g., 'G-ABC123XYZ') to enable Google Analytics
-    ga: {
-      measurementId: null, // Replace with your GA4 ID or keep null to disable
     },
   };
 
@@ -51,38 +45,10 @@
       console.info('[Analytics] DNT enabled - GA tracking disabled');
       return;
     }
-
-    // GA4 gtag snippet
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${config.ga.measurementId}`;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', config.ga.measurementId, {
-      anonymize_ip: true,
-      cookie_flags: 'SameSite=None;Secure',
-    });
-    
-    console.info('[Analytics] Google Analytics initialized');
-  }
-
-  // Initialize based on provider
+based on provider
   function init() {
     if (config.provider === 'plausible') {
-      initPlausible();
-    } else if (config.provider === 'ga') {
-      initGA();
-    } else {
-      console.info('[Analytics] No analytics provider configured');
-    }
-  }
-
-  // Wait for DOM ready
+      initPlausibler DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -123,8 +89,6 @@
         text: link.textContent.trim().substring(0, 50),
       });
     }
-  });
-
   // Expose for manual tracking
   window.trackEvent = trackEvent;
   window.AnalyticsConfig = config;
