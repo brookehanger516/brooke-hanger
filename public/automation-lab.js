@@ -243,9 +243,9 @@
           const videoCard = btn.closest('.video-card');
           const title = videoCard?.querySelector('h3')?.textContent;
           
-          // In production, this would open a modal or inline video player
-          // For now, show an alert as placeholder
-          alert(`Video player would open here:\n"${title}"\n\nThis is a placeholder. In production, this would load the actual video.`);
+          // TODO: Implement video modal player
+          // Option 1: YouTube/Vimeo embed in modal
+          // Option 2: HTML5 video player with custom controls
         });
       });
     }
@@ -264,7 +264,6 @@
       this.select.addEventListener('change', (e) => {
         const selected = e.target.value;
         // In production, this would filter data by timeframe
-        console.log(`Timeframe changed to: ${selected}`);
         
         // Visual feedback
         this.select.style.borderColor = 'var(--color-primary)';
@@ -304,8 +303,10 @@
 
     trackEvent(eventName, data) {
       // Placeholder for analytics integration
-      console.log(`Analytics: ${eventName}`, data);
       // In production: window.gtag?.('event', eventName, data);
+      if (window.gtag) {
+        window.gtag('event', eventName, data);
+      }
     }
   };
 

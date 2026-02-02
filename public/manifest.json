@@ -1,4 +1,5 @@
 {
+  "_comment": "TODO: Create icon-192.png and icon-512.png in /assets/img/ before deploying PWA",
   "name": "Brooke Alexis Hanger - Cloud & AI Solutions Expert",
   "short_name": "Brooke Hanger",
   "description": "Professional portfolio showcasing Salesforce, Power BI, and CRM automation expertise",
@@ -7,5 +8,19 @@
   "background_color": "#ffffff",
   "theme_color": "#014B8C",
   "orientation": "portrait-primary",
-  "categories": ["business", "productivity"]
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

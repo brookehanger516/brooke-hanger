@@ -1,11 +1,11 @@
 // Lightweight i18n Module
-// Supports EN, ES, FR, ZH with localStorage persistence
+// Supports EN, ES, ZH with localStorage persistence
 
 (function () {
   'use strict';
 
   const STORAGE_KEY = 'brooke-lang';
-  const SUPPORTED_LANGS = ['en', 'es', 'fr', 'zh'];
+  const SUPPORTED_LANGS = ['en', 'es', 'zh'];
   const DEFAULT_LANG = 'en';
   
   let currentLang = DEFAULT_LANG;

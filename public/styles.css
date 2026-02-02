@@ -340,6 +340,12 @@ picture {
   height: var(--header-height);
 }
 
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
 .brand {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -485,12 +491,12 @@ body.scroll-lock {
 .lang-switcher {
   display: flex;
   gap: var(--space-xs);
-  margin-left: var(--space-md);
+  margin-left: 0;
 }
 
 .lang-switcher button {
   padding: var(--space-xs) var(--space-sm);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
   background: transparent;
@@ -498,7 +504,7 @@ body.scroll-lock {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
-  min-height: var(--touch-target);
+  min-height: 32px;
 }
 
 .lang-switcher button:hover {

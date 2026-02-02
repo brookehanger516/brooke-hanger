@@ -44,12 +44,9 @@ const STATIC_ASSETS = [
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('[SW] Installing service worker...');
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('[SW] Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
@@ -61,8 +58,6 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('[SW] Activating service worker...');
-  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -75,7 +70,6 @@ self.addEventListener('activate', (event) => {
                      name !== DYNAMIC_CACHE;
             })
             .map((name) => {
-              console.log('[SW] Deleting old cache:', name);
               return caches.delete(name);
             })
         );
@@ -152,21 +146,6 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
-
-// Background sync for form submissions (if supported)
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-form-submissions') {
-    console.log('[SW] Syncing form submissions...');
-    event.waitUntil(syncFormSubmissions());
-  }
-});
-
-async function syncFormSubmissions() {
-  // Placeholder for form sync logic
-  // In real implementation, retrieve queued form data from IndexedDB
-  // and attempt to submit
-  console.log('[SW] Form sync complete');
-}
 
 // Push notifications (optional, for future enhancement)
 self.addEventListener('push', (event) => {

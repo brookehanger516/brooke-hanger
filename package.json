@@ -10,7 +10,6 @@
     "test:report": "playwright show-report",
     "resume:build": "node tools/build-resume.mjs",
     "resume:print": "playwright test tests/resume.spec.js --project='chromium' --grep='print styles' --reporter=list",
-    "validate:html": "echo 'HTML validation placeholder - install html-validate'",
     "validate": "bash tools/pre-deploy-check.sh",
     "deploy": "npm run validate && npm run deploy:gh-pages",
     "deploy:gh-pages": "gh-pages -d public -b gh-pages",

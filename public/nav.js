@@ -13,7 +13,15 @@
     <header class="site-header" role="banner">
       <div class="container">
         <nav class="navbar" aria-label="Main navigation">
-          <a class="brand" href="index.html">Brooke Hanger</a>
+          <div class="brand-section">
+            <a class="brand" href="index.html">Brooke Hanger</a>
+            <!-- Language Switcher -->
+            <div class="lang-switcher" role="group" aria-label="Language selection">
+              <button type="button" data-lang-switch="en" aria-pressed="true" title="English">EN</button>
+              <button type="button" data-lang-switch="es" aria-pressed="false" title="Español">ES</button>
+              <button type="button" data-lang-switch="zh" aria-pressed="false" title="中文">ZH</button>
+            </div>
+          </div>
           
           <button
             class="nav-toggle"
@@ -37,13 +45,6 @@
               <li><a href="resume.html" data-i18n="nav.resume">Resume</a></li>
               <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            
-            <!-- Language Switcher -->
-            <div class="lang-switcher" role="group" aria-label="Language selection">
-              <button type="button" data-lang-switch="en" aria-pressed="true" title="English">EN</button>
-              <button type="button" data-lang-switch="es" aria-pressed="false" title="Español">ES</button>
-              <button type="button" data-lang-switch="zh" aria-pressed="false" title="中文">ZH</button>
-            </div>
           </nav>
         </nav>
       </div>

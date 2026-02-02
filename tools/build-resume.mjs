@@ -88,7 +88,7 @@ function getTemplateData() {
       ]
     },
     "meta": {
-      "canonical": "https://brookehanger.com/resume.json",
+      "canonical": "https://brooke-hanger.com/resume.json",
       "version": "v1.0.0",
       "lastModified": new Date().toISOString()
     }
