@@ -204,10 +204,11 @@
 
 .kpi-label {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-xs);
+  opacity: 0.85;
 }
 
 .kpi-change {
@@ -240,7 +241,8 @@
 
 .section-description {
   text-align: center;
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  opacity: 0.75;
   max-width: 600px;
   margin: 0 auto var(--space-xl);
 }
@@ -328,7 +330,8 @@
 }
 
 .case-summary {
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  opacity: 0.8;
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--space-lg);
 }
@@ -344,7 +347,8 @@
 
 .case-metrics li {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text);
+  opacity: 0.8;
   margin: 0;
 }
 
